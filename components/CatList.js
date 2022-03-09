@@ -3,8 +3,6 @@ import { Button, View, Text, Image, StyleSheet, TextInput } from 'react-native'
 import { BoolifiedDeprecatedTextStylePropTypes } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 export default function CatListItems(props) {
-    const [islove, setislove] = useState(false);
-
     return( 
         <View style= {styles.container}>
             <Text style= {styles.title}>{props.name}</Text>
