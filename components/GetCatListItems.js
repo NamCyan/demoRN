@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
-import { Button, View, Text, Image, StyleSheet, TextInput } from 'react-native'
-import { BoolifiedDeprecatedTextStylePropTypes } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
+import { Button, View, Text, Image, StyleSheet, TouchableOpacity, Alert } from 'react-native'
 
-export default function CatListItems(props) {
+export default function GetCatListItems(props) {
     return( 
-        <View style= {styles.container}>
-            <Text style= {styles.title}>{props.name}</Text>
-            <Image source= {props.imagesrc} style={styles.catimage} />
-        </View> 
+        <TouchableOpacity activeOpacity={0.5} onPress= {() => {
+            Alert.alert("hello")
+        }}>
+            <View style= {styles.container}>
+                <Text style= {styles.title}>{props.name}</Text>
+                <Image source= {props.imagesrc} style={styles.catimage} />
+            </View> 
+        </TouchableOpacity>
     )
 }
 
