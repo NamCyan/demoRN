@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 import React from 'react'
 
-class CatDetail extends React.Component {
+class Cat1 extends React.Component {
     render() {
       return (
         <Text>Hello</Text>
@@ -25,4 +25,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default CatDetail;
+export default Cat1;

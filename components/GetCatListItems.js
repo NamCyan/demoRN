@@ -2,13 +2,12 @@ import React, { useState } from 'react'
 import { Button, View, Text, Image, StyleSheet, TouchableOpacity, Alert } from 'react-native'
 
 export default function GetCatListItems(props) {
+    const { catinfo, onPress } = props;
     return( 
-        <TouchableOpacity activeOpacity={0.5} onPress= {() => {
-            Alert.alert("hello")
-        }}>
+        <TouchableOpacity activeOpacity={0.5} onPress= {onPress}>
             <View style= {styles.container}>
-                <Text style= {styles.title}>{props.name}</Text>
-                <Image source= {props.imagesrc} style={styles.catimage} />
+                <Text style= {styles.title}>{catinfo.name}</Text>
+                <Image source= {catinfo.imagesrc} style={styles.catimage} />
             </View> 
         </TouchableOpacity>
     )

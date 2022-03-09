@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import CatList from './Screens/CatList';
-import CatDetail from './Screens/CatDetail'
+import Cat1 from './Screens/Cat1'
 
 
 const Stack = createNativeStackNavigator();
@@ -15,7 +15,8 @@ class App extends React.Component {
         return (
           <NavigationContainer>
             <Stack.Navigator>
-              <Stack.Screen name="Home" component={CatList} />
+              <Stack.Screen name="Home" component={CatList} options={{ title: 'Cat Dictionary' }} />
+              <Stack.Screen name="Cat1" component={Cat1} options= {({ route }) => ({ title: route.params.catname })}/>
             </Stack.Navigator>
           </NavigationContainer>
         )
