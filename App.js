@@ -1,11 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import CatListItems from './components/CatList'
+// import cat1 from "../assets/cat.png"
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <CatListItems name= "mèo đen" imagesrc= {require("./assets/cat.png")}/>
+      <CatListItems name= "kronol" imagesrc= {require("./assets/cat2.png")}/>
+      <CatListItems name= "mèo ngơ" imagesrc= {require("./assets/cat3.png")}/>
     </View>
   );
 }
@@ -13,8 +17,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    alignItems: 'stretch',
+    backgroundColor: 'pink',
     justifyContent: 'center',
+    paddingRight: 10,
+    paddingLeft: 10
   },
 });
