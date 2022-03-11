@@ -15,7 +15,7 @@ class CatList extends React.Component {
                 { id: 6, name: 'Mèo Ngầu', imagesrc: require("../assets/cat5.png") },
             ]
         }
-    };s
+    };
 
     render() {
         const { categories } = this.state
